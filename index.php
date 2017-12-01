@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="style1.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script src="js/jquery-1.9.1.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <style >
+/* Set a style for all buttons */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    width: 100%;
+}
+</style>
+</head>
+<body >
+  <div class="container-fluid ">
+    <div class="row">
+      <div class="col-sm-7">
+        <h1 class="header1">PatientDoctorConnect</h1>
+      </div>
+      <div class="col-sm-5">
+        <h3 class="header3">Care today, Just a CLICK away...</h3>
+      </div>
+    </div>
+  </div>
+ <div class="container-fluid hello" id="navbar">
+<div class="row ">
+    <div class="col-sm-6">
+      <h3 class="heading">Logo</h3>
+    </div>
+    <div class="col-sm-3">
+      <h3 class="headinghi">You Are:</h3>
+    </div>
+    <div class="col-sm-1">
+      <h3 class="heading5" onclick="document.getElementById('id01').style.display='block'">Patient</h3> 
+    </div>
+    <div class="col-sm-2">
+      <h3 class="heading4" onclick="document.getElementById('id01').style.display='block'">Doctor</h3> 
+    </div>
+  </div>
+</div>
+<div class="container-fluid">
+  <div class="row demo">
+  </div>
+  </div>
+
+<div id="id01" class="modal">
+  <div onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">X</div>
+  <form class="modal-content">
+    <div class="container">
+      <label><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" name="email" required>
+
+      <label><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+        <button type="button" class="cancelbtn" onclick="document.getElementById('id01').style.display='block'">Register</button>
+        <button type="submit" class="signupbtn">Login</button>
+    </div>
+  </form>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+
+
+
+  <script>
+window.onscroll = function(){
+  myFunction()
+ };
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+</script>
+</body>
+</html>
